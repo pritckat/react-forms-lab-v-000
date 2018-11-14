@@ -16,6 +16,10 @@ class LoginForm extends React.Component {
     })
   }
 
+  handleSubmit = e => {
+    e.preventDefault()
+  }
+
   render() {
     return (
       <form>
@@ -32,7 +36,7 @@ class LoginForm extends React.Component {
           </label>
         </div>
         <div>
-          <button type="submit">Log in</button>
+          <button type="submit" onSubmit={this.handleSubmit}>Log in</button>
         </div>
       </form>
     );
